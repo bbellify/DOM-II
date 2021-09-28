@@ -7,6 +7,8 @@ const header = document.querySelector('header');
 const navLinks = document.querySelectorAll('.nav-link');
 
 const busImage = document.querySelector('.intro img');
+const images = document.querySelectorAll('img')
+const imageArray = Array.from(images);
 
 const paragraphs = document.querySelectorAll('p');
 
@@ -27,6 +29,8 @@ busImage.addEventListener('dblclick', function(e) {
         e.target.style['max-width'] = '100%'
     }
 });
+
+imageArray.forEach(img => img.addEventListener('mouseover', e => e.target.style.border = '10px solid green'));
 
 function bKey(e){
     if (e.key === 'b') {
@@ -51,11 +55,7 @@ function destinationChanger(){
     destinationSection.style['align-items'] = 'center'
 }
 
-
-
-
-// come back here - select isn't working but the function syntax is correct
-// paragraphs.forEach(p => p.addEventListener('selectionchange', function() {
-//     let selection = document.getSelection();
-//     selection.style.color = 'orange';
-// }));
+window.addEventListener('copy', function(e) {
+    e.preventDefault();
+    alert('No stealing our copy!')
+})
