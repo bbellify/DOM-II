@@ -17,12 +17,14 @@ const destinationSection = document.querySelector('section.content-destination')
 const destinationH2 = document.querySelector('.content-destination h2')
 
 
+
 // event listeners
 header.addEventListener('mouseenter', e => e.target.style.backgroundColor = 'yellow');
 header.addEventListener('mouseleave', e => e.target.style.backgroundColor = 'white');
 
 navLinks.forEach(link => link.addEventListener('mouseenter', e => e.target.style.textDecoration = 'underline'));
 navLinks.forEach(link => link.addEventListener('mouseleave', e => e.target.style.textDecoration = ''));
+navLinks.forEach(link => link.addEventListener('click', (e) => e.preventDefault()))
 
 busImage.addEventListener('dblclick', function(e) {
     if (e.target.style['max-width'] === '100%') {
