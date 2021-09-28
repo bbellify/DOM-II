@@ -8,6 +8,8 @@ const navLinks = document.querySelectorAll('.nav-link');
 
 const busImage = document.querySelector('.intro img');
 
+const paragraphs = document.querySelectorAll('p');
+
 
 
 
@@ -34,3 +36,27 @@ busImage.addEventListener('dblclick', function(e) {
     }
 });
 
+function bKey(e){
+    if (e.key === 'b') {
+        paragraphs.forEach(p => p.style.border = '10px solid grey')
+    } 
+}
+document.addEventListener('keydown', bKey);
+
+function nKey(e){
+    if (e.key === 'n') {
+        paragraphs.forEach(p => p.style.border = '')
+    }
+}
+document.addEventListener('keydown', nKey);
+
+
+
+
+
+
+// come back here - select isn't working but the function syntax is correct
+// paragraphs.forEach(p => p.addEventListener('selectionchange', function() {
+//     let selection = document.getSelection();
+//     selection.style.color = 'orange';
+// }));
