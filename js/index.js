@@ -12,7 +12,9 @@ const imageArray = Array.from(images);
 
 const paragraphs = document.querySelectorAll('p');
 
-const destinationSection = document.querySelector('.content-destination')
+const destinationSection = document.querySelector('section.content-destination')
+
+const destinationH2 = document.querySelector('.content-destination h2')
 
 
 // event listeners
@@ -31,6 +33,13 @@ busImage.addEventListener('dblclick', function(e) {
 });
 
 imageArray.forEach(img => img.addEventListener('mouseover', e => e.target.style.border = '10px solid green'));
+
+destinationH2.addEventListener('click', function(e){
+    e.stopPropagation();
+    e.target.style.background = 'blue'; 
+});
+destinationSection.addEventListener('click', () => destinationSection.style.background = 'purple'
+);
 
 function bKey(e){
     if (e.key === 'b') {
