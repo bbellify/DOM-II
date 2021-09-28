@@ -6,6 +6,7 @@
 const header = document.querySelector('header');
 const navLinks = document.querySelectorAll('.nav-link');
 
+const busImage = document.querySelector('.intro img');
 
 
 
@@ -24,4 +25,12 @@ header.addEventListener('mouseleave', e => e.target.style.backgroundColor = 'whi
 
 navLinks.forEach(link => link.addEventListener('mouseenter', e => e.target.style.textDecoration = 'underline'));
 navLinks.forEach(link => link.addEventListener('mouseleave', e => e.target.style.textDecoration = ''));
+
+busImage.addEventListener('dblclick', function(e) {
+    if (e.target.style['max-width'] === '100%') {
+        e.target.style['max-width'] = '50%'
+    } else {
+        e.target.style['max-width'] = '100%'
+    }
+});
 
