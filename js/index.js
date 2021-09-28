@@ -10,15 +10,7 @@ const busImage = document.querySelector('.intro img');
 
 const paragraphs = document.querySelectorAll('p');
 
-
-
-
-
-
-
-
-
-
+const destinationSection = document.querySelector('.content-destination')
 
 
 // event listeners
@@ -50,7 +42,14 @@ function nKey(e){
 }
 document.addEventListener('keydown', nKey);
 
+document.addEventListener('scroll', () => header.style.height = '5vh')
 
+window.addEventListener('resize', destinationChanger)
+function destinationChanger(){
+    destinationSection.style.display = 'flex';
+    destinationSection.style['flex-direction'] = 'column-reverse';
+    destinationSection.style['align-items'] = 'center'
+}
 
 
 
