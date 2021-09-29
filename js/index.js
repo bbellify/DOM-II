@@ -1,8 +1,5 @@
 // Your code goes here
-
-
 // getters
-
 const header = document.querySelector('header');
 const navLinks = document.querySelectorAll('.nav-link');
 
@@ -16,7 +13,7 @@ const destinationSection = document.querySelector('section.content-destination')
 
 const destinationH2 = document.querySelector('.content-destination h2')
 
-
+const body = document.querySelector('body')
 
 // event listeners
 header.addEventListener('mouseenter', e => e.target.style.backgroundColor = 'yellow');
@@ -57,7 +54,9 @@ function nKey(e){
 }
 document.addEventListener('keydown', nKey);
 
-document.addEventListener('scroll', () => header.style.height = '5vh')
+document.addEventListener('scroll', () => header.style.height = '6vh')
+
+window.addEventListener('load', () => alert('Welcome to Fun Bus!'));
 
 window.addEventListener('resize', destinationChanger)
 function destinationChanger(){
